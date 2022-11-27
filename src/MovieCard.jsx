@@ -41,7 +41,7 @@ const MovieCard = ({ movie }) => {
                 <p>{plot}</p>
             </div>
             <div>
-                <a href={BASE_IMDB_MOVIE + movie.imdbID}>
+                <a href={BASE_IMDB_MOVIE + movie.imdbID} target="_blank" rel="noreferrer noopener">
                 <img src={movie.Poster !== 'N/A' ? movie.Poster : "./logo192.png"} alt={movie.Title}/>
                 </a>
 
