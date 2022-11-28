@@ -13,7 +13,7 @@ const MovieCard = ({ movie }) => {
             const data = await response.json();
             setPlot(data.Plot)
     }searchPlot(movie.imdbID);
-    }, []);
+    }, [movie.imdbID]);
 
     useEffect(()=>{async function searchRating (imdbID){
 
@@ -21,7 +21,7 @@ const MovieCard = ({ movie }) => {
         const data = await response.json();
         setRating(data.imdbRating)
     }searchRating(movie.imdbID);
-    }, []);
+    }, [movie.imdbID]);
 
     useEffect(()=>{async function searchActors (imdbID){
 
@@ -29,7 +29,7 @@ const MovieCard = ({ movie }) => {
         const data = await response.json();
         setActors(data.Actors)
     }searchActors(movie.imdbID);
-    }, []);
+    }, [movie.imdbID]);
 
     return(
         <div className="movie">
